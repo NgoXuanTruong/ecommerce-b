@@ -3,19 +3,17 @@
 class Database
 {
 
-	private $server = "remotemysql.com";
-	private $database = "xk7zJ6Nf1T";
-	private $username = "xk7zJ6Nf1T";
-	private $password = "af6nNyvgcj";
-	private $charset = "utf8mb4";
-	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
+	private $server = "mysql5033.site4now.net";
+	private $database = "db_a7bea1_xtruong";
+	private $username = "a7bea1_xtruong";
+	private $password = "99419Oggy";
 
-	protected $conn = "mysql:host=$host;dbname=$database;charset=$charset";
+	protected $conn;
 
 	public function open()
 	{
 		try {
-			$this->conn = new PDO($this->server, $this->username, $this->password, $this->options);
+			$this->conn = new PDO("mysql:host=$this->server;dbname= $this->database ", $this->username, $this->password);
 			return $this->conn;
 		} catch (PDOException $e) {
 			echo "There is some problem in connection: " . $e->getMessage();
