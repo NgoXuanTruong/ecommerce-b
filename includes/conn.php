@@ -3,12 +3,14 @@
 class Database
 {
 
-	private $server = "mysql5033.site4now.net";
-	private $username = "a7bea1_xtruong";
-	private $password = "99419Oggy";
+	private $server = "remotemysql.com";
+	private $database = "xk7zJ6Nf1T";
+	private $username = "xk7zJ6Nf1T";
+	private $password = "af6nNyvgcj";
+	private $charset = "utf8mb4";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 
-	protected $conn;
+	protected $conn = "mysql:host=$host;dbname=$database;charset=$charset";
 
 	public function open()
 	{
