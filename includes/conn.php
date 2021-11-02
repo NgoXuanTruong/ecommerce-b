@@ -2,9 +2,9 @@
 
 Class Database{
  
-	private $server = "mysql:host=localhost;dbname=ecomm";
-	private $username = "root";
-	private $password = "";
+	private $server = "mysql5033.site4now.net";
+	private $username = "a7bea1_xtruong";
+	private $password = "99419Oggy";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 	protected $conn;
  	
@@ -26,5 +26,3 @@ Class Database{
 }
 
 $pdo = new Database();
- 
-?>
